@@ -5,8 +5,8 @@
   "printWidth": 80,
   "tabWidth": 2,
   "useTabs": false,
-  "bracketSpacing": true,
-  "bracketSameLine": false,
+  "endOfLine": "crlf",
   "arrowParens": "avoid",
-  "endOfLine": "crlf"
+  "bracketSpacing": true,
+  "bracketSameLine": false
 }
