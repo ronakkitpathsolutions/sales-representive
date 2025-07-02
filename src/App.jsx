@@ -1,33 +1,52 @@
-import { useState } from 'react';
-import reactLogo from './assets/react.svg';
-import viteLogo from '/vite.svg';
-import './App.css';
+import React from 'react';
+import './index.css';
+import {
+  Card,
+  Button,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+  Input,
+} from '@/components';
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
-    <div>
-      <div>
-        <a href="https://vite.dev" target="_blank" rel="noreferrer">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank" rel="noreferrer">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount(prevCount => prevCount + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+    <div className="container mx-auto p-4">
+      <h1 className="text-2xl font-bold mb-6">Shadcn UI Components</h1>
+
+      <Card className="mb-6">
+        <CardHeader>
+          <CardTitle>Button Component</CardTitle>
+          <CardDescription>
+            Various button styles from Shadcn UI
+          </CardDescription>
+        </CardHeader>
+        <CardContent className="flex flex-wrap gap-3">
+          <Button variant="default">Default</Button>
+          <Button variant="destructive">Destructive</Button>
+          <Button variant="outline">Outline</Button>
+          <Button variant="secondary">Secondary</Button>
+          <Button variant="ghost">Ghost</Button>
+          <Button variant="link">Link</Button>
+        </CardContent>
+      </Card>
+
+      <Card>
+        <CardHeader>
+          <CardTitle>Input Component</CardTitle>
+          <CardDescription>Input field from Shadcn UI</CardDescription>
+        </CardHeader>
+        <CardContent>
+          <Input placeholder="Enter your name" className="mb-2" />
+          <Input type="email" placeholder="Enter your email" className="mb-2" />
+          <Input type="password" placeholder="Enter your password" />
+        </CardContent>
+        <CardFooter>
+          <Button>Submit</Button>
+        </CardFooter>
+      </Card>
     </div>
   );
 }
